@@ -7,6 +7,8 @@ idxi=0
 idxf=-1
 ###########
 
+##########COPYRIGHT Alonso Valdivia Quispe##############
+
 ###FUNCTIONS AREA###
 def SizeFiltro(Password):#Si es mayor igual a 8. True/False
     if(len(Password)<8):
@@ -109,22 +111,6 @@ def checkTime():#Si hay tres intentos fallidos en menos de 60 segundos. False/Tr
     return True
 ####################
 
-sin_pass=False
-
-while(sin_pass):
-    inputName=str(input("Usuario"))
-    inputPass=str(input("Password"))
-    TIME=datetime.now()
-    TIMES.append(TIME)
-    idxf+=1
-    raw=Check(inputName,inputPass)
-    validator=raw[0]
-    messages=raw[1]
-    if(validator):
-        sin_pass=False
-    for i in range(0,len(messages)):
-        print(messages[i])
-    
 #########TKINTER##############
 def Validar(User,Pass):
     global TIMES,idxf,idxi
